@@ -25,5 +25,6 @@ jobs:
           release-type: simple
           package-name: schema-registry
           version-file: version.txt
+          bump-minor-pre-major: true
           bump-patch-for-minor-pre-major: true
           prerelease: true
