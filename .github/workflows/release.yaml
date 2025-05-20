@@ -1,7 +1,11 @@
 on:
   push:
-    branches:
-      - "main"
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
 
 jobs:
   release-please:
@@ -10,6 +14,10 @@ jobs:
     outputs:
       release: ${{ steps.release.outputs.release_created }}
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - uses: googleapis/release-please-action@v3
         id: release
         with:
@@ -17,12 +25,6 @@ jobs:
           release-type: simple
           package-name: schema-registry
           version-file: version.txt
+          bump-minor-pre-major: true
           bump-patch-for-minor-pre-major: true
-  use:
-    name: Use
-    runs-on: ubuntu-latest
-    needs: release-please
-    steps:
-      - name: Print Release Output
-        run: |
-          echo "Release PR: ${{ needs.release-please.outputs.release }}"
+          prerelease: true
