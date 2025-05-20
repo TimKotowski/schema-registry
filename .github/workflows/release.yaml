@@ -1,6 +1,6 @@
 on:
   pull_request:
-    branches: [ "releasePlease/timkotowski" ]
+    branches: [ "main" ]
 
 jobs:
   release-please:
