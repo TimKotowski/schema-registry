@@ -26,18 +26,3 @@ jobs:
           package-name: schema-registry
           version-file: version.txt
           bump-patch-for-minor-pre-major: true
-
-      - name: Enable AUto Merger
-        run: |
-          gh pr merge --auto --squash ${{ steps.release.outputs.pr_number }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_PLEASE_TOKEN }}
-
-  use:
-    name: Use
-    runs-on: ubuntu-latest
-    needs: release-please
-    steps:
-      - name: Print Release Output
-        run: |
-          echo "Release PR: ${{ needs.release-please.outputs.release }}"
