@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/TimKotowski/schema-registry/compare/v0.1.0...v0.1.1) (2025-05-20)
+
+
+### Features
+
+* add stuff ([4db7ea1](https://github.com/TimKotowski/schema-registry/commit/4db7ea1a6c916d6cd9d26a6afa654cd2ce5c0db6))
+
 ## 0.1.0 (2025-05-20)
 
 
