@@ -1,3 +1,11 @@
 # schema-registry
-schema-registry to hold all grpc/proto/avros related schemas
-WIP
+A lightweight staging registry to manage, validate, and store Protobuf, Avro, and gRPC schemas before
+publishing schemas to Buf Schema Registry (BSR)
+
+## Structure
+```plaintext
+.
+└── proto3/         # (Protobuf, gRPC) schemas 
+    ├── stream/     # Protobuf schemas for real-time data streaming (Kafka)
+    └── services/   # Protobuf schemas for service-to-service gRPC communication
+```
