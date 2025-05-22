@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/TimKotowski/schema-registry/compare/v0.1.1...v0.1.2) (2025-05-22)
+
+
+### Features
+
+* add buf CI for lint and push ([14fbf2c](https://github.com/TimKotowski/schema-registry/commit/14fbf2c1a87d9ecf2df77c8115c89181ee920f52))
+
 ## [0.1.1](https://github.com/TimKotowski/schema-registry/compare/v0.1.0...v0.1.1) (2025-05-20)
 
 
