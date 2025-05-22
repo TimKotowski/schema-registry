@@ -30,14 +30,3 @@ jobs:
           bump-minor-pre-major: true
           bump-patch-for-minor-pre-major: true
           prerelease: true
-
-    buf:
-      name: Buf BSR Push
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - uses: bufbuild/buf-action@v1
-          with:
-            token: ${{ secrets.BSR_TOKEN }}
-            push: true
-#            path: src/proto3
