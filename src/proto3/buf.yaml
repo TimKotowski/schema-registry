@@ -1,0 +1,13 @@
+version: v2
+modules:
+  - path: .
+    name: buf.build/timkotowski/schema-registry
+deps:
+  - buf.build/googleapis/googleapis
+  - buf.build/timkotowski/schema-registry
+lint:
+  use:
+    - STANDARD
+breaking:
+  use:
+    - FILE

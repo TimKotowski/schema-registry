@@ -1,0 +1,27 @@
+name: Buf Pre Check
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  buf_pre_check:
+    name: Buf Pre Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Schema Registry
+        uses: actions/checkout@v4
+
+      - name: Set Up Scripts
+        uses: actions/checkout@v4
+        with:
+          repository: TimKotowski/masochist-scripts
+          token: ${{ secrets.GH_AUTO_MERGE }}
+          path: masochist-scripts
+
+      - name: Buf Lint
+        uses: ./masochist-scripts/actions/buf_pre_check
+        with:
+          path: 'src/proto3'
+          token: ${{ secrets.BSR_TOKEN }}
