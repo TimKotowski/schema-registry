@@ -5,6 +5,7 @@ on:
     branches:
       - 'main'
 
+
 jobs:
   buf_pre_check:
     name: Buf Pre Check
