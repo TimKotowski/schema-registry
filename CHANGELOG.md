@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.3](https://github.com/TimKotowski/schema-registry/compare/v0.1.2...v0.1.3) (2025-05-23)
+
+
+### Features
+
+* add codeowner ([c01d0dd](https://github.com/TimKotowski/schema-registry/commit/c01d0dd3d1b8b02213069b4c944c74bc1323620c))
+* readme update ([bcce4e8](https://github.com/TimKotowski/schema-registry/commit/bcce4e8dda0ad9adaeef17a5bd693c697e133c37))
+
 ## [0.1.2](https://github.com/TimKotowski/schema-registry/compare/v0.1.1...v0.1.2) (2025-05-22)
 
 
