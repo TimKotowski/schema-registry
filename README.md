@@ -7,5 +7,5 @@ publishing schemas to Buf Schema Registry (BSR)
 .
 └── proto3/         # (Protobuf, gRPC) schemas 
     ├── stream/     # Protobuf schemas for real-time data streaming (Kafka)
-    └── services/   # Protobuf schemas for service-to-service gRPC communication
+    └── service/   # Protobuf schemas for service-to-service gRPC communication
 ```
