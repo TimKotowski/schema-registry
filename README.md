@@ -1,5 +1,5 @@
 # schema-registry
-A lightweight staging registry to manage, validate, and store Protobuf, Avro, and gRPC schemas before
+A lightweight staging registry to manage, validate, and store Protobuf and gRPC schemas before
 publishing schemas to Buf Schema Registry (BSR)
 
 ## Structure
