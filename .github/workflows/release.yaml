@@ -4,6 +4,9 @@ on:
   push:
     branches: [ "main" ]
 
+concurrency:
+  group: ${{ github.workflow }}
+
 permissions:
   contents: write
   pull-requests: write
@@ -15,13 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       release: ${{ steps.release.outputs.release_created }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - uses: googleapis/release-please-action@v3
+    steps:
+      - name: Release
         id: release
+        uses: googleapis/release-please-action@v3
         with:
           token: ${{ secrets.RELEASE_PLEASE_ACTION }}
           release-type: simple
@@ -30,3 +31,32 @@ jobs:
           bump-minor-pre-major: true
           bump-patch-for-minor-pre-major: true
           prerelease: true
+
+  deploy_schema_registry:
+    if: ${{ needs.release-please.outputs.release }}
+    needs:
+      - release-please
+    name: Buf Schema Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout Masochist Scripts
+        id: bsr_release
+        uses: actions/checkout@v4
+        with:
+          repository: TimKotowski/masochist-scripts
+          path: masochist-scripts
+          token: ${{ secrets.GH_AUTO_MERGE }}
+
+      - name: Run Buf Schema Registry Push
+        uses: ./masochist-scripts/actions/buf_push
+        with:
+          token: ${{ secrets.BSR_TOKEN }}
+          path: "src/proto3"
+          gh_token: ${{ secrets.RELEASE_PLEASE_ACTION }}
