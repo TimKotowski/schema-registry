@@ -17,7 +17,7 @@ jobs:
     name: Release Please
     runs-on: ubuntu-latest
     outputs:
-      release: ${{ steps.release.outputs.releases_created }}
+      release: ${{ steps.release.outputs.release_created }}
 
     steps:
       - name: Release
@@ -34,7 +34,8 @@ jobs:
 
       - name: Debug Release Output
         run: |
-            echo "Release Created: ${{ steps.release.outputs.releases_created }}"
+            echo '${{ steps.release.outputs.release_created }}'
+            echo '${{ toJSON(steps.release.outputs) }}'
 
   deploy_schema_registry:
     if: ${{ needs.release-please.outputs.release }}
