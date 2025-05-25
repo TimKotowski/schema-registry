@@ -32,6 +32,11 @@ jobs:
           bump-patch-for-minor-pre-major: true
           prerelease: true
 
+      - name: Debug Release Output
+        run: |
+            echo "Release Created: ${{ steps.release.outputs.release_created }}"
+            echo "Outputs: ${{ toJSON(steps.release.outputs) }
+
   deploy_schema_registry:
     if: ${{ needs.release-please.outputs.release }}
     needs:
