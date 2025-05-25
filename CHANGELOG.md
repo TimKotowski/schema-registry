@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.1.3](https://github.com/TimKotowski/schema-registry/compare/v0.1.2...v0.1.3) (2025-05-25)
+
+
+### Features
+
+* add codeowner ([c01d0dd](https://github.com/TimKotowski/schema-registry/commit/c01d0dd3d1b8b02213069b4c944c74bc1323620c))
+* allow getting up CD for for deploying schema changes to BSR then to notify repos about successful push ([2928f83](https://github.com/TimKotowski/schema-registry/commit/2928f8399fad357307bbaa08fad6a7b59885e72d))
+* fix it all ([e489333](https://github.com/TimKotowski/schema-registry/commit/e48933394e9330fe5fd7f28e25c294f94595b76a))
+* readme update ([bcce4e8](https://github.com/TimKotowski/schema-registry/commit/bcce4e8dda0ad9adaeef17a5bd693c697e133c37))
+
+
+### Bug Fixes
+
+* CI ([3d86d79](https://github.com/TimKotowski/schema-registry/commit/3d86d79c43dd0328fcd0fb9433fc102e64c0ed4a))
+
 ## [0.1.2](https://github.com/TimKotowski/schema-registry/compare/v0.1.1...v0.1.2) (2025-05-22)
 
 
