@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/TimKotowski/schema-registry/compare/v0.1.3...v0.1.4) (2025-05-25)
+
+
+### Features
+
+* test push ([d8f81fa](https://github.com/TimKotowski/schema-registry/commit/d8f81faa925200772f29f05d382b2d73f0b0282b))
+
 ## [0.1.3](https://github.com/TimKotowski/schema-registry/compare/v0.1.2...v0.1.3) (2025-05-25)
 
 
