@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/TimKotowski/schema-registry/compare/v0.1.4...v0.1.5) (2025-05-25)
+
+
+### Features
+
+* make changes to CI nad CD ([0166dd3](https://github.com/TimKotowski/schema-registry/commit/0166dd380ceaf6ab0d5120166012ca800dff8f2b))
+
 ## [0.1.4](https://github.com/TimKotowski/schema-registry/compare/v0.1.3...v0.1.4) (2025-05-25)
 
 
