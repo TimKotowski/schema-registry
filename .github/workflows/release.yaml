@@ -32,11 +32,6 @@ jobs:
           bump-patch-for-minor-pre-major: true
           prerelease: true
 
-      - name: Debug Release Output
-        run: |
-            echo '${{ steps.release.outputs.release_created }}'
-            echo '${{ toJSON(steps.release.outputs) }}'
-
   deploy_schema_registry:
     if: ${{ needs.release-please.outputs.release }}
     needs:
@@ -64,4 +59,4 @@ jobs:
         with:
           token: ${{ secrets.BSR_TOKEN }}
           path: "src/proto3"
-          gh_token: ${{ secrets.RELEASE_PLEASE_ACTION }}
+          gh_token: ${{ secrets.GH_API_TOKEN }}
