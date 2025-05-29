@@ -17,6 +17,10 @@ jobs:
         changes: ${{ steps.identify_changes.outputs.src_count }}
 
       steps:
+        - name: Checkout
+          id: checkout
+          uses: actions/checkout@v4
+
         - name: Check Changes
           id: identify_changes
           run: |

@@ -3,12 +3,16 @@ syntax = "proto3";
 package stream.hello_world.v1;
 
 message Request {
+
   string name = 1;
+
 }
 
 message Response {
+
   string message = 1;
 }
+
 
 
 
