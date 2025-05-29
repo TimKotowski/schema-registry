@@ -24,7 +24,7 @@ jobs:
         - name: Check Changes
           id: identify_changes
           run: |
-            echo "src_count=$(git diff --name-only | grep src | wc -l)" >> $GITHUB_OUTPUT
+            echo "src_count=$(git diff --name-only HEAD^ HEAD | grep src | wc -l)" >> $GITHUB_OUTPUT
 
         - name: Debug
           id: debug
