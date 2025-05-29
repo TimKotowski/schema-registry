@@ -33,7 +33,7 @@ jobs:
           run: echo "DEBUG ${{ steps.identify_changes.outputs.src_count }}"
 
   deploy_schema_registry:
-    if: ${{ needs.release-please.outputs.release && needs.release-please.outputs.changes >= 1 }}
+    if: ${{ needs.changed.outputs.changes >= 1 }}
     needs:
       - changed
     name: Buf Schema Release
