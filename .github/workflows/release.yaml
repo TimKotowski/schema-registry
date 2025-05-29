@@ -18,13 +18,14 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       release: ${{ steps.release.outputs.release_created }}
+      changes: ${{ steps.identify_changes.outputs.src_count }}
 
     steps:
       - name: Release
         id: release
         uses: googleapis/release-please-action@v3
         with:
-          token: ${{ secrets.RELEASE_PLEASE_ACTION }}
+          token: ${{ secrets.GH_API_TOKEN }}
           release-type: simple
           package-name: schema-registry
           version-file: version.txt
@@ -32,8 +33,17 @@ jobs:
           bump-patch-for-minor-pre-major: true
           prerelease: true
 
+      - name: Check Changes
+        id: identify_changes
+        run: |
+          echo "src_count"=$(git diff --name-only | grep src | wc -l)" >> $GITHUB_OUTPUT)
+
+      - name: Debug
+        id: debug
+        run: echo "DEBUG ${{ steps.identify_changes.outputs.src_count }}"
+
   deploy_schema_registry:
-    if: ${{ needs.release-please.outputs.release }}
+    if: ${{ needs.release-please.outputs.release && needs.release-please.outputs.changes >= 1 }}
     needs:
       - release-please
     name: Buf Schema Release
@@ -60,3 +70,4 @@ jobs:
           token: ${{ secrets.BSR_TOKEN }}
           path: "src/proto3"
           gh_token: ${{ secrets.GH_API_TOKEN }}
+          id: ${{ github.run_id }}

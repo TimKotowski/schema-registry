@@ -9,5 +9,11 @@ message Request {
 
 // The response message containing the greetings
 message Response {
+
   string message = 1;
 }
+
+
+
+
+
