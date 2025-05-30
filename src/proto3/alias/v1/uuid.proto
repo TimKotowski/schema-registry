@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package stream.alias.v1;
+package alias.v1;
 
 message UUID {
   string value = 1;
