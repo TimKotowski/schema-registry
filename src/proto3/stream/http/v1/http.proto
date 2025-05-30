@@ -4,6 +4,7 @@ package stream.http.v1;
 
 message Request {
   string name = 1;
+  bytes body = 2;
 }
 
 message Response {
