@@ -8,23 +8,30 @@ enum DayOfWeek {
   DAY_OF_WEEK_UNSPECIFIED = 0;
 
   // Monday
+  // buf:lint:ignore ENUM_VALUE_PREFIX
   MONDAY = 1;
 
   // Tuesday
+  // buf:lint:ignore ENUM_VALUE_PREFIX
   TUESDAY = 2;
 
   // Wednesday
+  // buf:lint:ignore ENUM_VALUE_PREFIX
   WEDNESDAY = 3;
 
   // Thursday
+  // buf:lint:ignore ENUM_VALUE_PREFIX
   THURSDAY = 4;
 
   // Friday
+  // buf:lint:ignore ENUM_VALUE_PREFIX
   FRIDAY = 5;
 
   // Saturday
+  // buf:lint:ignore ENUM_VALUE_PREFIX
   SATURDAY = 6;
 
   // Sunday
+  // buf:lint:ignore ENUM_VALUE_PREFIX
   SUNDAY = 7;
 }
