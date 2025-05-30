@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.7](https://github.com/TimKotowski/schema-registry/compare/v0.1.6...v0.1.7) (2025-05-30)
+
+
+### Features
+
+* linting ([15ad385](https://github.com/TimKotowski/schema-registry/commit/15ad385db1e0c40eebaa71c67926257f1edc291e))
+
 ## [0.1.6](https://github.com/TimKotowski/schema-registry/compare/v0.1.5...v0.1.6) (2025-05-30)
 
 
