@@ -53,5 +53,6 @@ jobs:
         with:
           token: ${{ secrets.BSR_TOKEN }}
           path: "src/proto3"
+          tite: "Automated PR for changes in ${{ github.ref_name }}"
           gh_token: ${{ secrets.GH_API_TOKEN }}
           id: ${{ github.run_id }}
