@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.1.6](https://github.com/TimKotowski/schema-registry/compare/v0.1.5...v0.1.6) (2025-05-30)
+
+
+### Features
+
+* allow only buf schema pushed when valid changes to proto files occured ([b3aa7fb](https://github.com/TimKotowski/schema-registry/commit/b3aa7fb3bcd4376d7f25ad224f9beca006405d5f))
+* changes ([5abe410](https://github.com/TimKotowski/schema-registry/commit/5abe41014c9255bf1bb57fe981a962bfcaf070ca))
+* check clean phase ([9b84e7f](https://github.com/TimKotowski/schema-registry/commit/9b84e7f4435cdaca37d83f1a2dcdf84df5aa4520))
+* remove test file, CI should be working now ([1062fbb](https://github.com/TimKotowski/schema-registry/commit/1062fbb7770348f408be0b97ad641c2ba3c92d07))
+
+
+### Bug Fixes
+
+* more ci changes ([68ec26e](https://github.com/TimKotowski/schema-registry/commit/68ec26ee9a3b4dccb01e677403b15c1d7c1e1af7))
+* output ([bc4939e](https://github.com/TimKotowski/schema-registry/commit/bc4939ecdfb83e597d8f66a038543ea8ec6a7118))
+* test ci ([246e097](https://github.com/TimKotowski/schema-registry/commit/246e09755cb1c6e7a775f8b3ee77885c8dc83a25))
+
 ## [0.1.5](https://github.com/TimKotowski/schema-registry/compare/v0.1.4...v0.1.5) (2025-05-25)
 
 
