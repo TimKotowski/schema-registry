@@ -46,7 +46,7 @@ jobs:
         with:
           repository: TimKotowski/ci-scripts
           path: ci-scripts
-          token: ${{ secrets.GH_AUTO_MERGE }}
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Run Buf Schema Registry Push
         uses: ./ci-scripts/actions/buf_push
@@ -54,5 +54,5 @@ jobs:
           token: ${{ secrets.BSR_TOKEN }}
           path: "src/proto3"
           tite: "Automated PR for changes in ${{ github.ref_name }}"
-          gh_token: ${{ secrets.GH_API_TOKEN }}
+          gh_token: ${{ secrets.GH_TOKEN }}
           id: ${{ github.run_id }}
