@@ -5,9 +5,7 @@ on:
     branches:
       - main
 
-
 concurrency: ${{ github.workflow }}
-
 
 jobs:
   changed:
@@ -28,10 +26,6 @@ jobs:
           run: |
             echo "src_count=$(git diff --name-only HEAD^ HEAD | grep src | wc -l)" >> $GITHUB_OUTPUT
 
-        - name: Debug
-          id: debug
-          run: echo "DEBUG ${{ steps.identify_changes.outputs.src_count }}"
-
   deploy_schema_registry:
     if: ${{ needs.changed.outputs.changes >= 1 }}
     needs:
@@ -46,16 +40,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Checkout Masochist Scripts
+      - name: Checkout Ci-Scripts
         id: bsr_release
         uses: actions/checkout@v4
         with:
-          repository: TimKotowski/masochist-scripts
-          path: masochist-scripts
+          repository: TimKotowski/ci-scripts
+          path: ci-scripts
           token: ${{ secrets.GH_AUTO_MERGE }}
 
       - name: Run Buf Schema Registry Push
-        uses: ./masochist-scripts/actions/buf_push
+        uses: ./ci-scripts/actions/buf_push
         with:
           token: ${{ secrets.BSR_TOKEN }}
           path: "src/proto3"
