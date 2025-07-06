@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.7](https://github.com/TimKotowski/schema-registry/compare/v0.1.6...v0.1.7) (2025-07-06)
+
+
+### Features
+
+* add custom buf lint from go bin ([789c149](https://github.com/TimKotowski/schema-registry/commit/789c14957baf240a62c1a2fe876136375805625a))
+* custom linting rules ([63902d6](https://github.com/TimKotowski/schema-registry/commit/63902d6a77ef2cace243db405c4e805936800bed))
+* linting ([15ad385](https://github.com/TimKotowski/schema-registry/commit/15ad385db1e0c40eebaa71c67926257f1edc291e))
+* remove lint use ([58af2e2](https://github.com/TimKotowski/schema-registry/commit/58af2e20ac0bf23fa58192ba93009570ce2d29c9))
+
 ## [0.1.6](https://github.com/TimKotowski/schema-registry/compare/v0.1.5...v0.1.6) (2025-05-30)
 
 
