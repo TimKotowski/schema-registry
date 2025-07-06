@@ -13,6 +13,15 @@ jobs:
       - name: Checkout Schema Registry
         uses: actions/checkout@v4
 
+      - name: Install Go
+        uses: actions/setup-go@v5
+
+      - name: Go Version
+        run: go version
+
+      - name: Install Lint Deps
+        run: go install buf.build/go/bufplugin/check/internal/example/cmd/buf-plugin-timestamp-suffix@latest
+
       - name: Set Up Scripts
         uses: actions/checkout@v4
         with:
