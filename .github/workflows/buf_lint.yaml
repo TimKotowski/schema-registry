@@ -13,15 +13,24 @@ jobs:
       - name: Checkout Schema Registry
         uses: actions/checkout@v4
 
+      - name: Install Go
+        uses: actions/setup-go@v5
+
+      - name: Go Version
+        run: go version
+
+      - name: Install Lint Deps
+        run: go install buf.build/go/bufplugin/check/internal/example/cmd/buf-plugin-timestamp-suffix@latest
+
       - name: Set Up Scripts
         uses: actions/checkout@v4
         with:
-          repository: TimKotowski/masochist-scripts
+          repository: TimKotowski/ci-scripts
           token: ${{ secrets.GH_TOKEN }}
-          path: masochist-scripts
+          path: ci-scripts
 
       - name: Buf Lint
-        uses: ./masochist-scripts/actions/buf_pre_check
+        uses: ./ci-scripts/actions/buf_pre_check
         with:
-          path: 'src/proto3'
+          path: "src/proto3"
           token: ${{ secrets.BSR_TOKEN }}
