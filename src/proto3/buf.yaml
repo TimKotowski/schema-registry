@@ -5,9 +5,16 @@ modules:
 deps:
   - buf.build/googleapis/googleapis
   - buf.build/timkotowski/schema-registry
+  -
 lint:
   use:
     - STANDARD
+    - TIMESTAMP_SUFFIX
+    - COMMENTED
+plugins:
+  - plugin: buf-plugin-timestamp-suffix
+    options:
+      timestamp_suffix: _time
 breaking:
   use:
     - FILE
