@@ -10,7 +10,6 @@ lint:
   use:
     - STANDARD
     - TIMESTAMP_SUFFIX
-    - COMMENTED
 plugins:
   - plugin: buf-plugin-timestamp-suffix
     options:
